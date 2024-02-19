@@ -1,0 +1,322 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Georgia;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: #f72812;
+}
+
+p {
+    line-height: 1.5rem;
+}
+/* NavBar */
+
+#navbar {
+  padding: 1.5rem 2.5rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.logo-navbar {
+  width: 10%;
+}
+
+#navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-link {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Main  */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  padding: 2rem 2.5rem;
+}
+
+#posts-container {
+  flex: 3 1 0;
+}
+
+.post {
+  margin-bottom: 2.5rem;
+}
+
+.title,
+.description,
+.author {
+  margin-bottom: 1rem;
+}
+
+.title {
+  background-image: linear-gradient(to right, #b30000, #ff4949); /* Degrade  */
+  background-position: 0 100%; /* Começa o degradê do fundo da div */
+  background-size: 100% 2px; /* Altura e espessura da borda */
+  background-repeat: no-repeat;
+}
+.title {
+  font-size: 2rem;
+}
+
+.author {
+  color: #333;
+  font-weight: bold;
+}
+
+.conclusion {
+  margin-bottom: 1rem;
+}
+
+/* PADRONIZAÇÃO DOS TEXTOS  */
+p,
+h2,
+h3 {
+  color: #424242;
+  padding-bottom: 1rem;
+}
+
+p {
+  color: #535353 !important;
+}
+
+span {
+  color: #c7254e;
+  background-color: #f9f2f4;
+}
+
+bold.red-paragraph {
+  color: #b30000;
+  display: inline;
+  background-color: #fdfdfd;
+}
+
+/* LIST */
+
+ul {
+  list-style: none;
+}
+
+.quotes {
+  padding: 1rem 0 1rem 2rem;
+}
+
+/* NOTES */
+
+.notes {
+  padding-bottom: 2rem;
+}
+
+.notes p {
+  color: #251da2;
+}
+
+/* EXAMPLES  */
+.examples {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 1rem 0 2rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+
+  font-weight: bold;
+}
+
+
+.examples p {
+  padding: 0;
+}
+.examples p {
+  color: #333;
+}
+
+/* ATtENtION  */
+
+.attention {
+  margin: 2rem 0;
+  border: 1px solid #b300002b;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.attention .examples {
+  text-align: left;
+}
+
+.attention h3 {
+  font-size: 1.5rem;
+}
+
+/* TIPS  */
+
+.tips ul {
+  list-style: disc;
+}
+
+/* Barra lateral */
+
+#sidebar {
+  flex: 1 1 0;
+}
+
+#search-bar,
+#categories,
+#tags {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+#search-bar h4,
+#categories h4,
+#tags h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+#search-bar form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#search-bar input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+}
+
+#search-bar input[type="submit"] {
+  cursor: pointer;
+  background-color: #f72812;
+  color: #fff;
+  border: none;
+}
+
+#categories li {
+  margin-bottom: 1rem;
+}
+
+#tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#tags-container a {
+  background-color: #ddd;
+  padding: 0.5rem 0.7rem;
+  border: 0.3rem;
+}
+
+/* Rodapé */
+
+#footer {
+  border-top: 2px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+#footer h2{
+    padding-bottom: 5px;
+}
+
+/* Responsividade */
+
+@media (max-width: 790px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
+/* Phones  */
+
+@media (max-width: 600px) {
+  .examples p {
+    font-size: 12px;
+  }
+
+
+  p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .logo-navbar {
+    width: 15%;
+  }
+}
+
+/* ULTRAWIDE  */
+
+@media (min-width: 2560px) {
+  p {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+/* Others  */
+
+@media (max-width: 500px) {
+  .line-height p {
+    line-height: 15px;
+  }
+
+  .line-height {
+    height: 3rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .examples {
+    width: 85%; 
+  }
+
+  .logo-navbar {
+    width: 25%;
+  }
+
+}

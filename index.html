@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Semântico</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="navbar-inner">
+                <!--essa div é apenas para padronizar o texto, ao invés de usar o padding usaro o width  -->
+                <img src="Assets/img/new-logo.jpg" alt="logo-prime-data" class="logo-navbar">
+                <ul id="nav-link">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container"> <!--essa div é apenas para padronizar o texto, ao invés de usar o padding usaro o width  -->
+        <main id="posts-container">
+            <article class="post">
+                <h1 class="title">Como listar e mover arquivos no linux</h1>
+
+                <p>No universo do Linux, o terminal é uma ferramenta poderosa e essencial. Dois comandos fundamentais
+                    para a navegação e manipulação de arquivos são o <span>ls</span> e o <span>mv</span>. Neste guia,
+                    vamos explorar como utilizar esses comandos de maneira eficiente, facilitando sua experiência no
+                    ambiente Linux.</p>
+
+                <h2>Comando ls: Listando Arquivos e Diretórios </h2>
+
+                <p>O comando <span>ls</span> é utilizado para listar o conteúdo de um diretório. Aqui estão algumas
+                    opções
+                    comuns:</p>
+
+                <div class="quotes">
+                    <ul>
+                        <li>
+                            <p> <span>ls</span>: Lista os arquivos e diretórios no diretório atual.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p> <span>ls -l</span>: Apresenta uma lista detalhada, mostrando permissões, proprietário,
+                                grupo, tamanho e data de modificação.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p> <span>ls -a</span>: Mostra arquivos ocultos, que começam com ponto.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <span>ls -h</span>: Exibe tamanhos de arquivos de forma mais legível.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="notes">
+                    <p>
+                        Nota: Ao utilizar o comando <span>ls</span>, se você estiver dentro do diretório que deseja
+                        listar,
+                        basta inserir o comando <span>ls</span>. No entanto, se estiver fora do diretório desejado, é
+                        essencial fornecer o caminho completo para garantir a correta execução do comando. Certifique-se
+                        de
+                        especificar o caminho completo quando fora do diretório, enquanto dentro dele, apenas o nome do
+                        comando é suficiente. Essa distinção é crucial para garantir uma listagem precisa dos arquivos e
+                        diretórios, tornando o processo mais eficiente.
+                    </p>
+                </div>
+
+                <h3>Exemplo de Listar Arquivos</h3>
+
+                <p>
+                    Suponha que você esteja no diretório “/home/usuario/Downloads” e deseje listar os arquivos
+                    detalhadamente, incluindo informações como permissões, proprietário, grupo, tamanho e data de
+                    modificação. O comando <span>ls</span> pode ser utilizado da seguinte maneira:
+                </p>
+
+                <div class="examples">
+                    <p>ls -l </p>
+                </div>
+
+                <p>
+                    Este comando apresentará uma lista detalhada de todos os arquivos e diretórios no diretório
+                    “Downloads” do usuário “usuario”.
+                </p>
+
+                <p>
+                    Agora, imagine que você está no diretório “/home/usuario” e deseja listar os arquivos no diretório
+                    “Downloads”. Neste caso, estando fora do diretório desejado, é necessário fornecer o caminho
+                    completo para garantir que o comando seja executado corretamente:
+                </p>
+
+                <div class="examples ">
+                    <p>ls -l /home/usuario/Downloads </p>
+                </div>
+
+                <p>
+                    Este comando também apresentará uma lista detalhada de todos os arquivos e diretórios no diretório
+                    “Downloads” do usuário “usuario”, mesmo estando fora dele.
+                </p>
+
+                <div class="attention">
+                    <p>
+                        Se o usuário se chamasse Victoria e você estivesse no diretório “/home”, desejando listar os
+                        arquivos no diretório “Downloads” pertencente a Victoria, sendo necessário fornecer o caminho
+                        completo, o comando seria:
+                    </p>
+                    <div class="examples">
+                        <p>ls -l /home/victoria/Downloads </p>
+                    </div>
+                    <p>
+                        Este comando apresentará uma lista detalhada de todos os arquivos e diretórios no diretório
+                        “Downloads” do usuário “victoria”, mesmo estando fora dele. <bold class="red-paragraph">
+                            Certifique-se de substituir “victoria” pelo nome correto do usuário que deseja listar.
+                        </bold>
+                    </p>
+                </div>
+
+                <h2>Comando mv: Movendo e Renomeando Arquivos</h2>
+
+                <p>
+                    O comando <span>mv</span> é utilizado para mover ou renomear arquivos e diretórios. Eis como você
+                    pode usá-lo:
+                </p>
+
+                <div class="quotes">
+                    <ul>
+                        <li>
+                            <p>Mover um arquivo: <span>mv arquivo.txt /caminho/destino/</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p> Renomear um arquivo: <span>mv arquivo_antigo.txt arquivo_novo.txt</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>Exemplo 01: Mover um Arquivo de Fora do Diretório Atual:</h3>
+
+                <p>
+                    Suponha que você esteja no diretório “/home/usuario” e deseje mover o arquivo “documento.txt” para a
+                    pasta “Documentos”, que está localizada no mesmo diretório. <bold class="red-paragraph">Como você
+                        está fora do diretório onde o arquivo está, precisará fornecer o caminho completo:</bold>
+                </p>
+
+                <div class="examples line-height">
+                    <p>mv /home/usuario/documento.txt /home/usuario/Documentos/ </p>
+                </div>
+
+                <h3>Exemplo 02: Mover um Arquivo de Dentro do Diretório Atual:</h3>
+
+                <p>Agora, imagine que você já está no diretório “/home/usuario” e deseje mover o arquivo “documento.txt”
+                    para a pasta “Documentos”, que também está localizada no mesmo diretório. <bold
+                        class="red-paragraph"> Neste caso, como você já está no diretório onde o arquivo está presente,
+                        você pode simplificar o comando:</bold>
+                </p>
+
+                <div class="examples">
+                    <p>mv documento.txt Documentos/ </p>
+                </div>
+
+                <h3>Exemplo 03: Renomear arquivos</h3>
+
+                <p>
+                    Imagine que você tenha um arquivo chamado “roteiro_projeto.docx” e queira renomeá-lo para
+                    “projeto_final.docx”. O comando <span>mv</span> também é utilizado para renomear o arquivo:
+                </p>
+
+                <div class="examples">
+                    <p>mv roteiro_projeto.docx projeto_final.docx </p>
+                </div>
+
+                <p>
+                    Considerando que você esteja no diretório “/home/usuario/Projetos” e deseje renomear o arquivo
+                    “roteiro_projeto.docx” para “projeto_final.docx”, que está no diretório “/home/usuario/Documentos”.
+                    O comando <span>mv</span> também é utilizado para renomear o arquivo, fornecendo o caminho completo:
+                </p>
+
+                <div class="examples line-height">
+                    <p>mv /home/usuario/Documentos/roteiro_projeto.docx /home/usuario/Documentos/projeto_final.docx </p>
+                </div>
+
+                <h3>Dicas adicionais:</h3>
+
+                <div class="quotes tips">
+                    <ul>
+                        <li>
+                            <p> Para navegar entre diretórios, utilize o comando <span>cd</span>.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p> Combine o <span>ls</span> e o <span>mv</span> para ver os arquivos antes de movê-los.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p> Utilize a tecla Tab para completar automaticamente nomes de arquivos ou diretórios,
+                                economizando tempo.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Utilização do til (~): O til (~) é um atalho que representa o diretório home do usuário.
+                                Sua aplicação em caminhos torna os comandos mais flexíveis e independentes do nome
+                                específico do usuário. Em resumo, ao utilizar ~/ em caminhos, estamos nos referindo ao
+                                diretório home do usuário atual, tornando mais fácil a criação de comandos portáteis
+                                entre diferentes ambientes de usuário.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="conclusion">
+                    <h3>Conclusão</h3>
+
+                    <p>
+                        Dominar o uso do ls e do mv no terminal Linux é fundamental para qualquer usuário que queira
+                        explorar as capacidades desse sistema operacional de forma mais eficiente. Pratique esses comandos e
+                        descubra como eles podem facilitar suas tarefas diárias no Linux. O terminal pode parecer assustador
+                        no início, mas com o tempo, você perceberá que é uma ferramenta poderosa e versátil.
+                    </p>
+                </div>
+                <p class="author">Por: Victoria Reis</p>
+            </article>
+        </main>
+        <aside id="sidebar">
+            <section id="search-bar">
+                <h4>Busca</h4>
+                <form>
+                    <input type="text" placeholder="Pesquise aqui">
+                    <input type="submit" value="Buscar">
+                </form>
+            </section>
+
+            <section id="categories">
+                <h4>Saiba mais</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                        <li><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat quidem
+                                consequuntur fugit optio deserunt animi </a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing </a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur libero modi
+                                mollitia animi similique quas ad voluptate delectus</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur </a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="tags">
+                <h4>Tags</h4>
+                <div id="tags-container">
+                    <a href="#">Programação</a>
+                    <a href="#">AWS</a>
+                    <a href="#">Linux</a>
+                    <a href="#">Cloud</a>
+                    <a href="#">HTTPS</a>
+                    <a href="#">JavaScript</a>
+                    <a href="#">ReactJS</a>
+                </div>
+            </section>
+        </aside>
+    </div>
+    <footer id="footer">
+        <h2>Prime Data</h2>
+        <p>2024 &copy; Victoria Reis</p>
+    </footer>
+</body>
+
+</html>
